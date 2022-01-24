@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_wndr4300
+name: Build_wndr4300 
 
 on: 
   release:
