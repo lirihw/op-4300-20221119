@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_wndr4300 
+name: Build_wndr4300
 
 on: 
   release:
@@ -64,7 +64,7 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        git clone https://github.com/xiaorouji/openwrt-passwall lede/package/lienol
+		git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         
     - name: Update & Install feeds
@@ -73,11 +73,10 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    
-    #- name: Import external feeds - passwall 
-    #  working-directory: ./openwrt
+    #- name: Import external feeds - passwall
+    #working-directory: ./openwrt
     #run: |
-    # git clone https://github.com/xiaorouji/openwrt-passwall package/lienol
+    # git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
     #    git clone "your_github_link" package/"your_folder_name"      
 
     #- name: Import external feeds - JerryKuKu Argon
