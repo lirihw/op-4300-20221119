@@ -8,18 +8,18 @@
 name: Build_hg255d
 
 on: 
-  #release:
-  #  types: [published]
+  release:
+    types: [published]
 
- # push:
- #   branches: 
- #     - master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 8 * * 5
   
-  #watch:
-  #  types: [started]
+  watch:
+    types: [started]
 
 jobs:
   build:
