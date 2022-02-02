@@ -107,7 +107,9 @@ jobs:
     - name: Delete packages
       working-directory: ./openwrt
       run: |
-        cd bin/targets/*/*
+        cd bin
+        rm -rf packages
+        cd  targets/*/*
         rm -rf packages
     - name : Upload artifact
       uses: actions/upload-artifact@master
