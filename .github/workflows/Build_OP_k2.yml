@@ -108,9 +108,9 @@ jobs:
       working-directory: ./openwrt
       run: |
         cd bin
-        rm -rf packages
-        cd  targets/*/*
-        rm -rf packages
+        #rm -rf packages
+        #cd  targets/*/*
+        #rm -rf packages
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
