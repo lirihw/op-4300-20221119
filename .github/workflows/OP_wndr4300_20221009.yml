@@ -65,7 +65,7 @@ jobs:
       run: |
         git clone https://github.com/lirihw/immortalwrt-op-k2-221104 openwrt
         cd openwrt
-        #git clone https://github.com/kevin-morgan/luci-theme-argon-dark package/lean/luci-theme-argon-dark
+        git clone https://github.com/kevin-morgan/luci-theme-argon-dark package/lean/luci-theme-argon-dark
         git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
         #git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
@@ -91,7 +91,7 @@ jobs:
        CONFIG_FILE: 'wndr4300.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./customize.sh && ./customize.sh
+        # chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
         
     - name: Download package
